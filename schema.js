@@ -31,6 +31,7 @@ const RootQuery = new GraphQLObjectType({
                 quote: {type: GraphQLString}
             },
             resolve(parent, args){
+                console.log(args);
                 return fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${args.quote}&apikey=${authKey}`)
                     .then(res => res.json())
                     .then(

@@ -11,7 +11,6 @@ app.use('/graphql',
     schema, //same as 'schema: schema'
     graphiql: true
   }),
-  
 );
 
 const PORT = process.env.PORT || 5000;
