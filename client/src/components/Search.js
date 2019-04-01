@@ -1,25 +1,39 @@
 import React, { Component } from 'react';
 
 class Search extends Component {
+  state = {
+    quote: undefined
+  };  
+
   searchOutput = (e) => {
     e.preventDefault();
     const quote = e.target.elements.getQuote.value.trim();
     this.props.history.push(`/${quote}`);
-    
   };
-  
 
+  textChange = (e) => {
+    this.setState({quote: e.target.value});
+  }
+  
   render() {
     return (
       <div>
-        <form className = "mt-4" onSubmit = {this.searchOutput}  method = "GET">
-          <div class = "input-group">
-            <input class = "form-control form-control-lg" placeholder = "example: AAPL" type = "text" name = "getQuote"></input>
+        <form className = "mt-4" onSubmit = {this.searchOutput}>
+          <div className = "input-group">
+
+            <input 
+              onChange = {this.textChange} 
+              className = "form-control form-control-lg" 
+              placeholder = "example: AAPL" type = "text" 
+              name = "getQuote" 
+            />
+
             <div className = "input-group-append">
-              <button class = "btn btn-info">Get Info</button>
+              <button className = "btn btn-info" disabled = {!this.state.quote}>Get Info</button>
             </div>
           </div>
         </form>
+        
       </div>
     )
   }
