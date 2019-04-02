@@ -4,9 +4,9 @@ import Moment from 'react-moment';
 
 const StockComponent = ({latest: {symbol, price, high, low, latestDay}}) => (
   <div className = "card mt-4">
-    symbol &&<div className = "card-header">
+    <div className = "card-header">
       <h3>Info for {symbol} (as of <Moment format = "MMM Do, YYYY">{latestDay}</Moment>)</h3>
-  </div>
+    </div>
       
     <div className = "card-body">
       <h4>Current Price: {price}</h4>

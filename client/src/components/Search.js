@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 
 class Search extends Component {
   state = {
@@ -20,16 +21,17 @@ class Search extends Component {
       <div>
         <form className = "mt-4" onSubmit = {this.searchOutput}>
           <div className = "input-group">
-
             <input 
               onChange = {this.textChange} 
               className = "form-control form-control-lg" 
               placeholder = "example: AAPL" type = "text" 
               name = "getQuote" 
             />
-
             <div className = "input-group-append">
-              <button className = "btn btn-info" disabled = {!this.state.quote}>Get Info</button>
+              <button className = {classNames({
+                'btn btn-secondary': true,
+                'btn btn-info': this.state.quote
+              })} disabled = {!this.state.quote}>Get Info</button>
             </div>
           </div>
         </form>
