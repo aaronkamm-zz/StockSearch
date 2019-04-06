@@ -3,7 +3,15 @@
   width: 75%;
 }
 
+
+
 .appTitle {
   display: flex;
   justify-content: center;
 }
+
+/* .test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */

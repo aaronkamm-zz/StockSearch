@@ -17,8 +17,14 @@ class App extends Component {
       <ApolloProvider client = {client}>
         <BrowserRouter>
           <div className="container">
-            <h1 className = "appTitle">Stock Search</h1>
-            <div className = "centerComponent"><Route exact path = "/" component = {Search} /></div>
+            <div>
+              <h1 className = "appTitle">Stock Search</h1>
+
+              <div className = "centerComponent">
+                <Route exact path = "/" component = {Search} />
+              </div>
+              
+            </div>
             <Route exact path = "/:quote" component = {Stock} />
           </div>
         </BrowserRouter>

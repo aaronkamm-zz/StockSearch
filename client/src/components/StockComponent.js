@@ -12,7 +12,7 @@ const StockComponent = ({latest: {symbol, price, high, low, latestDay}}) => (
       <h4>Current Price: {price}</h4>
       <h4>High: {high}</h4>
       <h4>Low: {low}</h4>
-      <Link className = "btn btn-warning mt-3" to = '/'>Back to Search</Link>
+      <Link className = "btn btn-warning mt-3" to = '/'> Back to Search</Link>
     </div>
   </div> 
 );
