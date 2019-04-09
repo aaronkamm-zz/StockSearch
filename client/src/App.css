@@ -1,17 +1,33 @@
-.centerComponent {
-  margin: 0 auto;
-  width: 75%;
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 
-
+.appContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 
 .appTitle {
   display: flex;
   justify-content: center;
 }
 
-/* .test {
+.appComponents {
   display: flex;
-  justify-content: center;
   align-items: center;
-} */
+  justify-content: center;
+  flex-direction: column;
+  
+}
+.centerComponent{
+  margin: 0;
+  width: 500px;
+}
+
+.appTitle {
+  margin: auto;
+}
