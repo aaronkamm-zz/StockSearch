@@ -23,11 +23,17 @@
   flex-direction: column;
   
 }
-.centerComponent{
+.centerComponents{
   margin: 0;
   width: 500px;
 }
 
 .appTitle {
   margin: auto;
+}
+
+@media(max-width: 768px){
+  [class*="centerComponents"] {
+    width: 100%
+  }
 }
