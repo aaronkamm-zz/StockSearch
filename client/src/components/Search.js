@@ -19,6 +19,7 @@ class Search extends Component {
   render() {
     return (
       <div>
+        <p className = "instructions">Enter a North American company quote</p>
         <form className = "mt-4" onSubmit = {this.searchOutput}>
           <div className = "input-group">
             <input 

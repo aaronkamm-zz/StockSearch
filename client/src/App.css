@@ -28,6 +28,11 @@
   width: 600px;
 }
 
+.centerComponents .instructions {
+  display: flex;
+  justify-content: center;
+}
+
 .appTitle {
   margin: auto;
 }
@@ -35,5 +40,8 @@
 @media(max-width: 768px){
   [class*="centerComponents"] {
     width: 100%
+  }
+  [class*="appTitle"] {
+    font-size: 2rem;
   }
 }

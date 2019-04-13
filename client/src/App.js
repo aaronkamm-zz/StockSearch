@@ -19,7 +19,7 @@ class App extends Component {
           <div className="container appContainer">
             <div className = "appComponents">
               
-              <h1 className = "appTitle">Stock Search</h1>
+              <h1 className = "appTitle">Stock Market Search</h1>
               
               <div className = "centerComponents">
                 <Route exact path = "/" component = {Search} />
